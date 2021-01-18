@@ -37,7 +37,7 @@
     "enableTranslation": false,
     "blueprints": [],
     "herokuAppName": "be-plan",
-    "herokuDeployType": "jar",
+    "herokuDeployType": "git",
     "herokuJavaVersion": "11"
   }
 }
