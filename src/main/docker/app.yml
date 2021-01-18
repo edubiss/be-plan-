@@ -6,11 +6,11 @@ services:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,swagger
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
-      - SPRING_DATASOURCE_URL=jdbc:mysql://beplan-mysql:3306/beplan?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://beplan-postgresql:5432/BePlan
       - JHIPSTER_SLEEP=30 # gives time for other services to boot before the application
     ports:
       - 8080:8080
-  beplan-mysql:
+  beplan-postgresql:
     extends:
-      file: mysql.yml
-      service: beplan-mysql
+      file: postgresql.yml
+      service: beplan-postgresql

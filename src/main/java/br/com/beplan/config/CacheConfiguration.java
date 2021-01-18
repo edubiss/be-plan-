@@ -48,7 +48,6 @@ public class CacheConfiguration {
             createCache(cm, br.com.beplan.domain.User.class.getName());
             createCache(cm, br.com.beplan.domain.Authority.class.getName());
             createCache(cm, br.com.beplan.domain.User.class.getName() + ".authorities");
-            createCache(cm, br.com.beplan.domain.Tipster.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
