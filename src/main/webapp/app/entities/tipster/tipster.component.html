@@ -1,0 +1,77 @@
+<div>
+    <h2 id="page-heading">
+        <span>Tipsters</span>
+
+        <button *jhiHasAnyAuthority="'ROLE_ADMIN'" id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-tipster" [routerLink]="['/tipster/new']">
+            <fa-icon icon="plus"></fa-icon>
+            <span>
+            Create a new Tipster
+            </span>
+        </button>
+    </h2>
+
+    <jhi-alert-error></jhi-alert-error>
+
+    <jhi-alert></jhi-alert>
+
+    <div class="alert alert-warning" id="no-result" *ngIf="tipsters?.length === 0">
+        <span>No tipsters found</span>
+    </div>
+
+    <div class="table-responsive" id="entities" *ngIf="tipsters && tipsters.length > 0">
+        <table class="table table-striped" aria-describedby="page-heading">
+            <thead>
+                <tr>
+                    <th scope="col" ><span>ID</span></th>
+                    <th scope="col" ><span>Nome</span></th>
+                    <th scope="col" ><span>Desempenho</span></th>
+                    <th scope="col" ><span>Desempenho Mes</span></th>
+                    <th scope="col" ><span>Desempenho Ano</span></th>
+                    <th scope="col" ><span>Desempenho Total</span></th>
+                    <th scope="col" ><span>Esporte</span></th>
+                    <th scope="col" ><span>Horarios</span></th>
+                    <th scope="col" ><span>Nr Tips Dia</span></th>
+                    <th scope="col" ><span>Data</span></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tipster of tipsters ;trackBy: trackId">
+                    <td><a [routerLink]="['/tipster', tipster.id, 'view']">{{ tipster.id }}</a></td>
+                    <td>{{ tipster.nome }}</td>
+                    <td>{{ tipster.desempenho }}</td>
+                    <td>{{ tipster.desempenhoMes }}</td>
+                    <td>{{ tipster.desempenhoAno }}</td>
+                    <td>{{ tipster.desempenhoTotal }}</td>
+                    <td>{{ tipster.esporte }}</td>
+                    <td>{{ tipster.horarios }}</td>
+                    <td>{{ tipster.nrTipsDia }}</td>
+                    <td>{{ tipster.data | date:'medium' }}</td>
+                    <td class="text-right">
+                        <div class="btn-group">
+                            <button type="submit"
+                                    [routerLink]="['/tipster', tipster.id, 'view']"
+                                    class="btn btn-info btn-sm">
+                                <fa-icon icon="eye"></fa-icon>
+                                <span class="d-none d-md-inline">View</span>
+                            </button>
+
+                            <button type="submit" *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                                    [routerLink]="['/tipster', tipster.id, 'edit']"
+                                    class="btn btn-primary btn-sm">
+                                <fa-icon icon="pencil-alt"></fa-icon>
+                                <span class="d-none d-md-inline">Edit</span>
+                            </button>
+
+                            <button type="submit" (click)="delete(tipster)" *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                                    class="btn btn-danger btn-sm">
+                                <fa-icon icon="times"></fa-icon>
+                                <span class="d-none d-md-inline">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

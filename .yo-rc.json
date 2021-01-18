@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "br.com.beplan"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "BePlan",
+    "packageName": "br.com.beplan",
+    "packageFolder": "br/com/beplan",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZDkxYmM1ZTkzNThiMzkwZjgyYTk3YmZmYjUxNTU3ODVmNDQ4ZTlkNWU4ODVkZDkxYmI4YjY1YWI5ZGRiYWYwNjU2MTZhYThlYjBiMjNlY2M4MDA0NTQxYTA2OGYxODM0YzAzZDY3ZTdmNGUwNjUwY2MzY2YzZTczNDI5NDRhODg=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1607443867273,
+    "testFrameworks": ["protractor"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": [],
+    "herokuAppName": "be-plan",
+    "herokuDeployType": "jar",
+    "herokuJavaVersion": "11"
+  }
+}

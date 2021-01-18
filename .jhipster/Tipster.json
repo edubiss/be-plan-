@@ -1,0 +1,53 @@
+{
+  "name": "Tipster",
+  "fields": [
+    {
+      "fieldName": "nome",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "desempenho",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "desempenhoMes",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "desempenhoAno",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "desempenhoTotal",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "esporte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "horarios",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nrTipsDia",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "data",
+      "fieldType": "Instant"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210118182357",
+  "entityTableName": "tipster",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
