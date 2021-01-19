@@ -19,8 +19,15 @@ eureka:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: ${JDBC_DATABASE_URL}
-    username: ${JDBC_DATABASE_USERNAME}
-    password: ${JDBC_DATABASE_PASSWORD}
+    url: jdbc:postgresql://qebrpklafeekwp:9f24a19d4f9b350a2a1be643f2d1fc32cd7474133a70c4629b54121ed7170a05@ec2-52-202-22-140.compute-1.amazonaws.com:5432/d4966p1tr910ud
+    username: qebrpklafeekwp
+    password: 9f24a19d4f9b350a2a1be643f2d1fc32cd7474133a70c4629b54121ed7170a05
     hikari:
-      maximumPoolSize: 8
+      poolName: Hikari
+      auto-commit: false
+  jpa:
+    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL10Dialect
+    show-sql: false
+  # Replace by 'prod, faker' to add the faker context and have sample data loaded in production
+  liquibase:
+    contexts: prod
